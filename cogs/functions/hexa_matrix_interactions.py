@@ -141,7 +141,7 @@ class OriginCoreModal(Modal):
 
         global core_user
         for i in range(len(core_user[self.ctx.author.id].origin)):
-            self.add_item(InputText(label = f"技能核心{i+1}", placeholder = "請輸入技能核心等級(1~30)", max_length=2))
+            self.add_item(InputText(label = f"技能核心{i+1}", placeholder = "請輸入技能核心等級(1~30)", max_length=2, required=False))
     
     async def callback(self, interaction: discord.Interaction):
         global core_user
@@ -161,7 +161,7 @@ class MasteryCoreModal(Modal):
 
         global core_user
         for i in range(len(core_user[self.ctx.author.id].mastery)):
-            self.add_item(InputText(label = f"精通核心{i+1}", placeholder = "請輸入精通核心等級(0~30)", max_length=2))
+            self.add_item(InputText(label = f"精通核心{i+1}", placeholder = "請輸入精通核心等級(0~30)", max_length=2, required=False))
     
     async def callback(self, interaction: discord.Interaction):
         global core_user
@@ -179,7 +179,7 @@ class EnhanceCoreModal(Modal):
 
         global core_user
         for i in range(len(core_user[self.ctx.author.id].enhance)):
-            self.add_item(InputText(label = f"強化核心{i+1}", placeholder = "請輸入強化核心等級(0~30)", max_length=2))
+            self.add_item(InputText(label = f"強化核心{i+1}", placeholder = "請輸入強化核心等級(0~30)", max_length=2, required=False))
     
     async def callback(self, interaction: discord.Interaction):
         global core_user
@@ -197,7 +197,7 @@ class CommonCoreModal(Modal):
 
         global core_user
         for i in range(len(core_user[self.ctx.author.id].common)):
-            self.add_item(InputText(label = f"共通核心{i+1}", placeholder = "請輸入共通核心等級(0~30)", max_length=2))
+            self.add_item(InputText(label = f"共通核心{i+1}", placeholder = "請輸入共通核心等級(0~30)", max_length=2, required=False))
     
     async def callback(self, interaction: discord.Interaction):
         global core_user
@@ -213,7 +213,7 @@ class OtherInfoModal(Modal):
         self.ctx = ctx
         self.message = message
         self.add_item(InputText(label="背包內剩餘碎片", placeholder="輸入數量", required=True))
-        self.add_item(InputText(label="平均每日打怪獲得量", placeholder="輸入數量(不含每日任務12個，不輸入預設為0)",required=False))
+        self.add_item(InputText(label="平均每日打怪獲得量", placeholder="輸入數量(不含每日任務12個，不輸入預設為0)",required=False, required=False))
     
     async def callback(self, interaction: discord.Interaction):
         global core_user
