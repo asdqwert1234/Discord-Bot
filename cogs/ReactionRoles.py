@@ -13,7 +13,7 @@ class ReactionRoles(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.messages = json.loads(os.getenv('reaction_role_message_id'))
-        self.channel = os.getenv('reaction_role_channel_id')
+        self.channel = os.getenv('role_channel_id')
 
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
