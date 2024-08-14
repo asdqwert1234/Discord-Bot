@@ -205,7 +205,6 @@ class MemberAdministration(commands.Cog):
     async def change_nick(self, ctx):
         await ctx.channel.purge(limit=1)
         if ctx.author.guild_permissions.manage_nicknames:
-            await ctx.respond(f'正在修改，請稍後', delete_after=5, ephemeral=True)
             SQL = os.getenv("postgresql")
             if SQL:
                 SQL = json.loads(SQL)
