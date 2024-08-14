@@ -18,6 +18,7 @@ class ReactionRoles(commands.Cog):
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         #身分組
+        role_name = None
         if payload.message_id in self.messages.values():
             emoji_name = payload.emoji.name
             if payload.message_id == self.messages["maplestory"]:
@@ -35,6 +36,7 @@ class ReactionRoles(commands.Cog):
 
     @commands.Cog.listener()
     async def on_raw_reaction_remove(self, payload):
+        role_name = None
         if payload.message_id in self.messages.values():
             emoji_name = payload.emoji.name
             if payload.message_id == self.messages["maplestory"]:
