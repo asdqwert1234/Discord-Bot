@@ -212,7 +212,7 @@ class MemberAdministration(commands.Cog):
                 print("找不到 postgresql 環境變數")
                 return
             cur = PostgreSQL(SQL)
-            guild = self.bot.get_guild(os.getenv("guild_id"))
+            guild = self.bot.get_guild(int(os.getenv("guild_id")))
             target_list = cur.get_nick_list()
             for user_id, maplestory_id in target_list:
                 member = guild.get_member(user_id)
