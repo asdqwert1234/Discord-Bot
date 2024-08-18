@@ -86,7 +86,7 @@ def data_check(data):
         try:
             days = int(data['guild_roll_call'])
             if 0 <= days < 365:
-                data['guild_roll_call'] = (datetime.datetime.now(tz).date() - datetime.timedelta(days=days)).date()
+                data['guild_roll_call'] = (datetime.datetime.now(tz) - datetime.timedelta(days=days)).date()
             else:
                 del data['guild_roll_call']
         except ValueError:
