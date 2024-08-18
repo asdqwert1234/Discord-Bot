@@ -3,11 +3,14 @@
 '''
 
 import os, asyncio, discord, random, datetime, data.emoji
+from dotenv import load_dotenv
 from discord.ext import commands, tasks
 from cogs.functions.time_functions import check_times_up
 from data.content import ROLL_CALL_MESSAGE, ROLL_CALL_GIF, RECOVERY_RULE
 from data.role_lists import guild_officer
 from data.time_parameters import tz
+
+load_dotenv()
 
 class Alarm(commands.Cog):
     def __init__(self, bot):
@@ -28,7 +31,7 @@ class Alarm(commands.Cog):
     async def daily_clock(self):
         print('時間到了')
         guild = self.bot.get_guild(int(os.getenv("guild_id")))
-
+        
         # 點名通知
         role = discord.utils.get(guild.roles, name = data.emoji.reaction_role_maplestory["pepe_mention"])
         channel = self.bot.get_channel(int(os.getenv("mention_channel_id")))
