@@ -71,7 +71,7 @@ class Alarm(commands.Cog):
 
         # 每月一日還技能、練分身次數刷新，留言規則提醒
         if now.day == 1:
-            await restore_permission_channel.send(embed=RECOVERY_RULE)
+            await restore_permission_channel.send(embeds=RECOVERY_RULE)
         
 
 

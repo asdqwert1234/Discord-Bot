@@ -31,7 +31,7 @@ restore_skill_rule = discord.Embed(
     color = discord.Color.random()
 )
 
-affiliated_guilds_rule.add_field(name='**【注意】**',value="分身公會是給大家方便提升戰力來練等\n請麻煩練完一定要記得退公會！別增加幹部的負擔\n請自己檢查一下有沒有還沒退的\n太多次被我們檢查到會記違規\n超過三次就不准再加入瞜" ,inline=False)
+affiliated_guilds_rule.add_field(name='**【注意】**',value="分身公會這個月起改為玩具肝坊\n分身公會是給大家方便提升戰力來練等\n請麻煩練完一定要記得退公會！別增加幹部的負擔\n請自己檢查一下有沒有還沒退的\n太多次被我們檢查到會記違規\n超過三次就不准再加入瞜" ,inline=False)
 restore_skill_rule.add_field(name='**【注意】**',value="請記得檢查你是否已經完成本周的任務\n要有紀錄才會歸還技能\n一個月只有一次還技能的機會喔" ,inline=False)
 
 RECOVERY_RULE.append(affiliated_guilds_rule)
