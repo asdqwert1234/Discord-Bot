@@ -253,6 +253,7 @@ class MatrixButton(discord.ui.Button):
             modal = OtherInfoModal(self.ctx, self.message)
         elif selected == "結算進度":
             await self.message.edit(content='以下為計算結果', view=None)
+            del core_user[self.ctx.author.id]
         if modal:
             await interaction.response.send_modal(modal)
         pass

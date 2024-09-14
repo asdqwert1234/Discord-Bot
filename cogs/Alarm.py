@@ -64,8 +64,8 @@ class Alarm(commands.Cog):
         not_processed_messages.clear()
                 
         now = datetime.datetime.now(tz)
-        # 每週一幹部事務提醒通知
-        if now.weekday() == 0:
+        # 每週四幹部事務提醒通知
+        if now.weekday() == 3:
             guild_master = discord.utils.get(guild.roles, name="玩具團長")
             await admin_channel.send(f"{guild_master.mention} 跨週了！記得\n1.小兵檢查\n2.公會技能")
 
