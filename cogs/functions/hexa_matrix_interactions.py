@@ -11,7 +11,7 @@ class Core():
         self.user_id = ctx.author.id
         self.name = ctx.author.display_name
         self.origin = [1]           # 起源
-        self.mastery = [0,0]        # 精通
+        self.mastery = [0,0,0,0]        # 精通
         self.enhance = [0,0,0,0]    # 強化
         self.common = [0]           # 共通
         self.fragments = 0          # 背包碎片
@@ -253,7 +253,6 @@ class MatrixButton(discord.ui.Button):
             modal = OtherInfoModal(self.ctx, self.message)
         elif selected == "結算進度":
             await self.message.edit(content='以下為計算結果', view=None)
-            del core_user[self.ctx.author.id]
         if modal:
             await interaction.response.send_modal(modal)
         pass
